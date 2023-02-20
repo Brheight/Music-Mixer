@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main.apps.MainConfig',
+    'ui.apps.UiConfig',
+    'userInterface.apps.UserinterfaceConfig',
+    'spotify.apps.SpotifyConfig',
     'rest_framework',
 ]
 
@@ -123,3 +126,10 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+STATIC_ROOT = 'static'
+
+STATICFILES_DIRS = [
+    BASE_DIR / "userInterface/static",
+
+]
+
