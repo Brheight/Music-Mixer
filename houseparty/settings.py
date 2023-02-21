@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-pa0=!=rgljb3ka+0@+x*w=ldiw#p-khge+=wfy7mlf#3$2@rth'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ["apps.tabdevelopers.org", "www.apps.tabdevelopers.org"]
+ALLOWED_HOSTS = [".vercel.app","apps.tabdevelopers.org", "www.apps.tabdevelopers.org"]
 
 
 # Application definition
@@ -132,3 +132,9 @@ STATICFILES_DIRS = [
 
 ]
 
+
+import os
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'

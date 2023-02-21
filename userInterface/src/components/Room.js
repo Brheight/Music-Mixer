@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { Grid, Button, Typography } from "@material-ui/core";
 import {Link} from "react-router-dom";
 import CreateRoomPage from "./CreateRoomPage";
-import MusicPlayer from "./MusicPlayer";
+//import MusicPlayer from "./MusicPlayer";
 export default class Room extends Component {
     constructor(props){
         super(props);

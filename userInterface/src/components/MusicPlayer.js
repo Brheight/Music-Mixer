@@ -12,7 +12,7 @@ export default class MusicPlayer extends Component {
     
     
     skipSong(){
-        const = requestOptions = {
+        const requestOptions = {
             method:"POST",
             headers: {'Content-Type':'application/json'}
         };
@@ -36,7 +36,7 @@ export default class MusicPlayer extends Component {
         fetch('/spotify/play', requestOPtions);
     }
     render(){
-        const = songProgress = (this.props.time / this.props.duration) * 100;
+        const songProgress = (this.props.time / this.props.duration) * 100;
         
         return(
         <Card>
@@ -56,7 +56,7 @@ export default class MusicPlayer extends Component {
                     
                     <div>
                             <IconButton  onClick = {() => {this.props.is_playing ? this.pauseSong() : this.playSong()}}>
-                                {this.props.is_playing ? <PauseIcon /> 1 <PlayArrowIcon />}
+                                {this.props.is_playing ? <PauseIcon /> : <PlayArrowIcon />}
                             </IconButton>
                     
                         <IconButton onClick = {() => this.skipSong()}>
