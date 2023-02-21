@@ -7,7 +7,7 @@ from rest_framework import status
 from rest_framework.response import Response
 from .util import *
 from django.http import HttpResponse
-from api.models import Room
+from main.models import Room
 from .models import Vote
 
 
@@ -91,7 +91,7 @@ class CurrentSong(APIView):
             'image_url':album_cover,
             'is_playing': is_playing,
             'votes':votes,
-            'votes_required':room.votes_to_skip
+            'votes_required':room.votes_to_skip,
             'id': song_id
             
             

@@ -25,7 +25,6 @@ from django.views.static import serve
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('main.urls')),
-    path('ui', include('ui.urls')),
     path('sp/', include('spotify.urls')),
     path('', include('userInterface.urls')),
     

@@ -1,5 +1,5 @@
 from django.db import models
-from api.models import Room
+from main.models import Room
 
 # Create your models here.
 
@@ -12,7 +12,7 @@ class SpotifyToken(models.Model):
     token_type = models.CharField(max_length=50)
     
     
-class Vote(models.Models):
+class Vote(models.Model):
     user = models.CharField(max_length=50, unique= True)
     create_at = models.DateTimeField(auto_now_add = True)
     song_id = models.CharField(max_length= 50)
